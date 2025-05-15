@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    container_name: app_postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+ 
+
+  localstack:
+    image: localstack/localstack
+    container_name: dev_localstack
+    environment:
+      - SERVICES=s3, logs, cloudwatch
+      - DEFAULT_REGION=us-east-1
+      - COMPOSE_WATCH_SILENCE=true
+
+    ports:
+      - "4566:4566"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+networks:
+  container_net:  
+    external: false  # すでに作成済みのネットワークを使う 
+
+  
+volumes:
+  postgres_data: {} 
