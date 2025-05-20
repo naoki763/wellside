@@ -9,6 +9,10 @@ class UserBase(BaseModel):
     id: int
     username: str
     full_name: str
+    created_at: datetime
+    updated_at: datetime
+
+    model_config = {"from_attributes": True}
 
 
 class UserCreate(BaseModel):
@@ -17,16 +21,5 @@ class UserCreate(BaseModel):
     password: str
 
 
-class UserCreateResponse(BaseModel):
-    username: str
-    full_name: str
-
-
-class User(UserBase):
-    id: int
-    created_at: datetime
-    updated_at: datetime
-
-
-class Users(UserBase):
-    users: list[User]
+class Users(BaseModel):
+    users: list[UserBase]

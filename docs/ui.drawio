@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="YLwj6vb1SDLNr1dYSD4C" name="利用者UI">
-        <mxGraphModel dx="594" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="915" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -79,9 +79,10 @@
                 <mxCell id="g8NwKjg87IKpm-8DfMJY-27" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.chat;" vertex="1" parent="1">
                     <mxGeometry x="76" y="860" width="30" height="18" as="geometry"/>
                 </mxCell>
-                <mxCell id="g8NwKjg87IKpm-8DfMJY-52" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" target="g8NwKjg87IKpm-8DfMJY-37">
+                <mxCell id="g8NwKjg87IKpm-8DfMJY-52" value="" style="edgeStyle=none;html=1;" edge="1" parent="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="373.6966824644551" y="690" as="sourcePoint"/>
+                        <mxPoint x="385.7819905213271" y="702.75" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="g8NwKjg87IKpm-8DfMJY-30" value="AI" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
@@ -105,23 +106,59 @@
                 <mxCell id="g8NwKjg87IKpm-8DfMJY-36" value="userid" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="160" y="742.75" width="80" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="g8NwKjg87IKpm-8DfMJY-37" value="10:00" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="360" y="702.75" width="80" height="30" as="geometry"/>
-                </mxCell>
                 <mxCell id="g8NwKjg87IKpm-8DfMJY-38" value="登録日: 2025年5月" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="164" y="790" width="116" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="g8NwKjg87IKpm-8DfMJY-51" value="アイコン" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
                     <mxGeometry x="66" y="652.75" width="50" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="g8NwKjg87IKpm-8DfMJY-53" value="登録日: 2025年5月" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="164" y="840" width="116" height="30" as="geometry"/>
+                <mxCell id="g8NwKjg87IKpm-8DfMJY-53" value="フォロー中：100" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="164" y="870" width="116" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BpqPET3kiUHJhVXLiEbf-23" value="フォロワー: 100" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="342" y="870" width="116" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-23" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="970" width="420" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-24" value="username" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="982.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-25" value="アイコン" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="972.75" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-26" value="userid" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="982.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-27" value="9:00" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="982.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-28" value="aaaaaaaaaaaaaaaaaaaaaaaa" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="1022.75" width="250" height="47.25" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-29" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="1100" width="420" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-30" value="username" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="1112.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-31" value="アイコン" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="1102.75" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-32" value="userid" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="1112.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-33" value="8:00" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="1112.75" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="-T-Jvdb1WSfP1WCB7-a0-35" value="投稿" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="950" width="60" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram id="YU8KDukED4jeLQpHjHah" name="home UI">
-        <mxGraphModel dx="594" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="915" dy="601" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

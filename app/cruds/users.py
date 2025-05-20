@@ -20,7 +20,7 @@ def create_user(db: Session, request_body: UserCreate):
     new_user = User()
     new_user.username = request_body.username
     new_user.password = request_body.password
-    new_user.full_name = request_body.full_name
+    new_user.user_id = request_body.user_id
     new_user.created_at = datetime.now()
     new_user.updated_at = datetime.now()
 

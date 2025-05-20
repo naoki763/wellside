@@ -26,25 +26,15 @@ tasks:
     cmds:
       - uv run uvicorn app.main:app --reload
 
-  migrate-init:
-    desc: db migrate init
-    cmds:
-    - uv run flask --app "app.factory:create_app()" db init
-    
-  migrate-history:
-    desc: show migrate history
-    cmds:
-    - uv run flask --app "app.factory:create_app()" db history
-
   migrate-create:
     desc: create db_migration file when db model changed
     cmds:
-    - uv run flask --app "app.factory:create_app()" db migrate -m "Auto Migrate!"
+    - uv run alembic -c tools/migration/alembic.ini revision --autogenerate -m "db migration"
 
   migrate-upgrade:
     desc: upgrade db
     cmds:
-    - uv run flask --app "app.factory:create_app()" db upgrade
+    - uv run alembic -c tools/migration/alembic.ini upgrade head
 
   migrate-downgrade:
     desc: downgrade db
