@@ -67,8 +67,9 @@
 | ----------------- | ----------------- | ------------------------------- |
 | `id`              | UUID              | PK, default gen\_random\_uuid() |
 | `username`        | VARCHAR(50)       | UNIQUE, NOT NULL                |
+| `full_name`       | VARCHAR(50)       | NOT NULL                        |
 | `email`           | VARCHAR(100)      | UNIQUE, NOT NULL                |
-| `hashed_password` | VARCHAR(128)      | NOT NULL                        |
+| `password`        | VARCHAR(128)      | NOT NULL                        |
 | `created_at`      | TIMESTAMP WITH TZ | DEFAULT now()                   |
 | `updated_at`      | TIMESTAMP WITH TZ | DEFAULT now()                   |
 

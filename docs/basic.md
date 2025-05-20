@@ -12,8 +12,8 @@
 
 ```plaintext
 ┌──────────────┐      ┌────────┐      ┌──────────┐
-│  Client (Vue) │ ⇄ WebSocket/REST ⇄ │  FastAPI  │ ⇄ │  PostgreSQL │
-│  - Vue.js     │      │Backend API│      │ DB         │
+│  Client (React) │ ⇄ WebSocket/REST ⇄ │  FastAPI  │ ⇄ │  PostgreSQL │
+│  - React.js     │      │Backend API│      │ DB         │
 │  - TypeScript │      └────────┘      └──────────┘
 └──────────────┘           │
                             │
@@ -37,31 +37,29 @@
 | ------------ | ---------------------------------------- | -------------------- |
 | 言語／フレームワーク   | Python, FastAPI                          | Web API              |
 | ORM          | SQLAlchemy                               | DBアクセス               |
-| 言語／フレームワーク   | TypeScript, Vue.js                       | フロントエンド（SPA）         |
+| 言語／フレームワーク   | TypeScript, React.js                       | フロントエンド（SPA）         |
 | DB           | PostgreSQL                               | リレーショナルデータベース        |
 | 認証／認可        | OAuth2 / JWT                             | トークンベース認証・認可         |
 | キャッシュ／PubSub | Redis                                    | セッションキャッシュ・Pub/Sub通知 |
 | メッセージング      | WebSocket / Socket.IO                    | リアルタイムチャット           |
 | AI分析・要約      | OpenAI API                               | 投稿分析、要約レポート生成        |
-| インフラ         | AWS (ECS, RDS, S3, ALB, CloudWatch)      | 本番環境                 |
+| インフラ         | AWS (Lambda, RDS, S3, CloudWatch)      | 本番環境                 |
 | IaC          | Terraform                                | インフラ構成管理             |
 | ローカル開発       | DevContainer, LocalStack, Docker Compose | AWSモック、開発環境構築        |
 | パッケージ管理      | uv (py包管理), mise                         | Python環境管理           |
 | タスク管理        | go-task                                  | 開発タスク自動化             |
-| Lint／フォーマット  | ruff, Black, ESLint, Prettier            | コード品質・フォーマット         |
+| Lint／フォーマット  | ruff         | コード品質・フォーマット         |
 | 型チェック        | mypy, TypeScript                         | 静的型検査                |
 | テスト          | pytest, pytest-asyncio, Vitest, Cypress  | ユニット・E2Eテスト          |
 | CI/CD        | GitHub Actions / AWS CodePipeline        | 自動ビルド／デプロイ           |
-| ロギング／トレーシング  | structlog / OpenTelemetry                | 構造化ログ・分散トレーシング       |
-| メトリクス        | Prometheus / Grafana                     | システム監視               |
 | ドキュメンテーション   | Swagger (FastAPI自動生成)                    | API仕様書               |
 | Secret管理     | AWS Secrets Manager / Parameter Store    | 機密情報管理               |
 
 ## 4. コンポーネント設計
 
-### 4.1 フロントエンド（Vue.js）
+### 4.1 フロントエンド（React.js）
 
-* **構成**：Vue 3 + Composition API + Vue Router + Pinia
+* **構成**：React 3 + Composition API + React Router + Pinia
 * **主要機能**：
 
   * 投稿タイムライン表示
@@ -96,13 +94,11 @@
 
 * **インフラ構成**：
 
-  * AWS ECS Fargate クラスター
+  * AWS Lambda
   * RDS for PostgreSQL
   * S3 バケット + CloudFront
-  * ALB（HTTPS）
-  * CloudWatch Logs / Metrics
-* **CI/CD**：GitHub Actionsで
-
+  * CloudWatch Logs
+* **CI/CD**：GitHub Actions
   * Lint → Test → Build Docker → Terraform Plan/Apply → Deploy
 
 ## 5. 非機能要件対応
@@ -110,9 +106,8 @@
 | 要件      | 対応技術・手法                    |
 | ------- | -------------------------- |
 | パフォーマンス | Redisキャッシュ、DBインデックス設計      |
-| 可用性     | ECS Auto Scaling、マルチAZ RDS |
 | セキュリティ  | HTTPS/TLS、WAF導入、IAM最小権限    |
-| 拡張性     | マイクロサービス分割、コンテナ化           |
+| 拡張性     | マイクロサービス分割           |
 | 保守性     | IaC、コードLint/型チェック、自動テスト    |
 
 ---

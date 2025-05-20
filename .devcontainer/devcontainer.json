@@ -64,7 +64,9 @@
             }
         }
     },
-    "postCreateCommand": "mise use -y && mise install -y" //devcontainer作成後に実行するコマンド
+    // "postCreateCommand": "mise use -y && mise install -y" //devcontainer作成後に実行するコマンド
 
- //devcontainer作成後に実行するコマンド
+    "postCreateCommand": "mise trust && mise use -y && mise install -y"
+
+
 }

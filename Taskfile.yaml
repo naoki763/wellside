@@ -54,12 +54,12 @@ tasks:
   approach-db:
     desc: approach to db-container
     cmds:
-    - docker exec -it db_dev bash
+    - docker exec -it app_postgres bash
 
   docker-containers-up:
     desc: docker compose up for localstack and db
     cmds:
-      - docker compose -f backend/Docker/docker-compose.yml up -d
+      - docker compose -f Docker/docker-compose.yml up -d
 
   s3-create:
     desc: create service in localstack-container
@@ -81,4 +81,3 @@ tasks:
     cmds:
       - task uv-start
       - task docker-containers-up
-      - task s3-create
