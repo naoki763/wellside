@@ -11,3 +11,33 @@ static/image/
 .ruff_cache
 *.session.sql
 .env.local
+
+
+# --- Terraform ---
+# ローカルの Terraform 作業ディレクトリ
+**/.terraform/*
+!.terraform/.gitignore
+
+# 状態ファイル（機密情報を含むため）
+*.tfstate
+*.tfstate.*
+
+# Terraform plan ファイル
+*.tfplan
+
+# 秘匿情報を含む変数ファイル（任意）
+*.tfvars
+*.tfvars.json
+
+# クラッシュログなどのデバッグファイル
+crash.log
+crash.*.log
+
+# 観察用の override 設定（Git管理外が一般的）
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# その他一時ファイル
+.terraform.lock.hcl

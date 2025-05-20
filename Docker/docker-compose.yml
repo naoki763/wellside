@@ -19,7 +19,7 @@ services:
     container_name: dev_localstack
     environment:
       - SERVICES=s3, logs, cloudwatch
-      - DEFAULT_REGION=us-east-1
+      - DEFAULT_REGION=ap-northeast-1
       - COMPOSE_WATCH_SILENCE=true
 
     ports:

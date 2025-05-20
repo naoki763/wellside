@@ -14,7 +14,8 @@
         // "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind"
     ], //ホストのディレクトリをコンテナ内にマウントする設定
 
-    
+    "forwardPorts": [5678], //debug用のポートを指定
+
     "customizations": {
         "vscode": {
             "extensions": [ //vscodeの拡張機能を追加
@@ -60,7 +61,10 @@
                 ],
                 "[terraform]": {
                     "editor.formatOnSave": true
-                }
+                },
+
+                "debug.internalConsoleOptions": "openOnSessionStart" //debug設定
+
             }
         }
     },

@@ -7,8 +7,9 @@ from pydantic import BaseModel
 
 class UserBase(BaseModel):
     id: int
+    user_id: str
     username: str
-    full_name: str
+    email: str
     created_at: datetime
     updated_at: datetime
 
@@ -18,6 +19,7 @@ class UserBase(BaseModel):
 class UserCreate(BaseModel):
     username: str
     full_name: str
+    email: str
     password: str
 
 
